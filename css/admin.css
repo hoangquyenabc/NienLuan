@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.admin-panel {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: #212529;
+    color: #ecf0f1;
+    top: 0; 
+    left: 0;
+    position: fixed;
+    padding: 20px;
+    padding-bottom: 50px;
+    overflow-y: auto;
+    border-radius: 10px;
+
+}
+
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e91e63;
+}
+
+.sidebar hr {
+    opacity: 0.3; 
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar nav ul li.active a {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.sidebar nav ul li a:hover {
+    background-color: #e91e63; 
+    color: #ddd; 
+}
+
+h4 {
+    text-align: right; 
+    margin-bottom: 30px;
+    color: #e91e63;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: fixed;
+    
+}
+
+.title {
+    opacity: 0.6; 
+    font-size: 15px;
+    padding-top: 20px;
+
+}
+
+.container {
+    position: flex;
+    margin-left: 260px; /* Đẩy sang phải, tránh sidebar */
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 1px); /* Đảm bảo không gây tràn */
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Top bar */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    width: calc(100% - 260px);
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.top-bar .breadcrumb {
+    font-size: 14px;
+    color: #666;
+}
+
+.top-bar .user-info {
+    font-size: 14px;
+}
+
+.top-bar .username {
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    margin-left: 260px;
+    margin-top: 80px; /* Đẩy xuống sau top-bar */
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.container h2 {
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}

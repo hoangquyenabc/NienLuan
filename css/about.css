@@ -1,0 +1,56 @@
+.container-ab{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    }
+
+.content {
+    max-width: 60%;
+    }
+
+.content h3 {
+    color:#7fad39;
+    font-weight: bold;
+    }
+
+.content h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    }
+
+.content p {
+    margin: 10px 0;
+    color: #555;
+    }
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    padding: 0;
+    list-style: none; /* Bỏ dấu đầu dòng */
+    }
+
+.features li {
+    padding: 1px 0;
+    }
+
+.features li::before {
+    content: '';
+    color: #7fad39;
+    position: absolute;
+    left: 2;
+    top: 0;
+    }
+
+.image img {
+    max-width: 400px;
+    height: 550px; /* Đặt chiều cao cụ thể */
+    object-fit: cover; /* Giữ hình ảnh không bị biến dạng */
+    }
+h4{
+    color: #7fad39;
+}

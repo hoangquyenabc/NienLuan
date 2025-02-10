@@ -1,0 +1,118 @@
+footer {
+    background-color: #212529; /* Màu nền tối */
+    color: white; /* Màu chữ trắng */
+    padding: 40px 20px; /* Padding cho footer */
+    margin-top: 100px;
+}
+
+.container-ft {
+    display: flex;
+    justify-content: space-between; /* Căn giữa các phần */
+    flex-wrap: wrap;
+    max-width: 1200px; /* Giới hạn chiều rộng */
+    margin: auto; /* Căn giữa footer */
+    
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px; /* Kích thước chữ tiêu đề */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #ffffff; /* Màu liên kết trắng */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.footer-section a:hover {
+   
+    color: #7fad39; 
+}
+
+.newsletter {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.newsletter h4 {
+    margin-bottom: 10px;
+}
+.newsletter p {
+    white-space: nowrap;
+}
+
+.newsletter input {
+    padding: 10px;
+    margin-right: 10px;
+    border: none; /* Bỏ viền */
+    border-radius: 5px; /* Bo góc */
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.newsletter button {
+    padding: 10px 15px;
+    background-color: #7fad39; /* Màu nền nút */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Bo góc */
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #7fad39; /* Màu khi hover */
+}
+
+
+.footer-bottom p {
+    
+   text-align: center;
+
+}
+
+.social-icons {
+   
+    
+    font-size: 22px;
+    display: flex;
+    gap: 15px; /* Khoảng cách giữa các biểu tượng */
+    margin-left: 720px;
+    
+    
+}
+
+.social-icons a {
+    width: 40px; /* Chiều rộng biểu tượng */
+    height: 40px; /* Chiều cao biểu tượng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff; /* Màu chữ trắng */
+    background-color: gray; /* Màu nền biểu tượng */
+    border-radius: 50%; /* Bo tròn hoàn toàn */
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng mượt */
+    
+}
+
+.social-icons a:hover {
+    background-color: #7fad39; /* Đổi màu nền khi hover */
+    transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}

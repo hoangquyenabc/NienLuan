@@ -1,0 +1,570 @@
+<?php
+    session_start();
+?>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Store</title>
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/detail.css"> 
+    <link rel="stylesheet" href="css/cart.css"> 
+    <link rel="stylesheet" href="css/checkout.css"> 
+    <link rel="stylesheet" href="css/review.css"> 
+    
+    
+     
+   
+   
+    
+    
+    <style>
+        .container-sp {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 1200px; /* Điều chỉnh độ rộng tối đa */
+            width: 100%; /* Chiếm toàn bộ chiều rộng */
+            margin: 0 auto; /* Căn giữa container */
+            margin-top: 150px;
+            margin-left: 365px;
+        }
+        .search-bar {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        .search-bar input {
+            width: 35%; /* Hoặc chỉnh sửa thành chiều rộng mong muốn */
+            height: 40px;
+            padding: 5px;
+            border: 1px solid #333; /* Thêm kiểu đường viền và màu */
+            border-radius: 10px;
+            margin-right: 10px; /* Khoảng cách giữa input và nút */
+        }
+
+        .search-bar button {
+            padding: 10px 15px;
+            background-color: #e91e63;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* .search-bar button:hover {
+            background-color: #003f7f;
+        } */
+
+
+        /* Khung danh sách sản phẩm */
+        .product-list {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-top: 30px;
+            
+        }
+
+        .product-list .header {
+            background-color: #fff;
+            color: #fff;
+            padding: 10px;
+            font-size: 20px;
+            color: #e91e63;
+            font-size: 25px;
+        }
+
+        .product-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .product-list th, .product-list td {
+            padding: 10px;
+            /* text-align: center; */
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-list th {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        .custom-dropdown-toggle {
+            color: #000000; /* Màu chữ đen */
+            text-decoration: none; /* Loại bỏ gạch chân */
+            transition: all 0.3s ease; /* Hiệu ứng mượt */
+            font-size: 20px;
+        }
+
+    /* Hiệu ứng hover */
+        .custom-dropdown-toggle:hover {
+            color: #7fad39; 
+            text-decoration: none; 
+        }
+
+    /* Hiệu ứng khi nhấn */
+        .custom-dropdown-toggle:active {
+            color: #000000; 
+            text-decoration: none; 
+        }
+        .buy-now-4 {
+            position: absolute;
+            bottom: 160px; /* Cách dưới 20px */
+            left: 1px; /* Đưa nút về bên trái */
+            margin-left: 50px;
+            padding: 8px 35px;
+            background-color: #82B9CB; /* Màu nền */
+            color: #fff; /* Màu chữ */
+            border: 2px solid #fff; /* Đường viền dày 2px, màu trắng */
+            border-radius: 5px; /* Bo góc */
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .buy-now {
+            position: absolute;
+            bottom: 20px; /* Cách dưới 20px */
+            left: 10px; /* Đưa nút về bên trái */
+            padding: 8px 35px;
+            background-color: #C6BFB9; /* Màu nền */
+            color: #fff; /* Màu chữ */
+            border: 2px solid #fff; /* Đường viền dày 2px, màu trắng */
+            border-radius: 5px; /* Bo góc */
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .buy-now-4:hover {
+            background-color: #fff;
+            color: #82B9CB; 
+        }
+
+        .buy-now:hover {
+            background-color:  #fff;
+            color: #C6BFB9; 
+        }
+        .buy-now-3 {
+            position: absolute;
+            bottom: 20px; /* Cách dưới 20px */
+            left: 10px; /* Đưa nút về bên trái */
+            padding: 8px 35px;
+            background-color: #C9BCB6; /* Màu nền */
+            color: #fff; /* Màu chữ */
+            border: 2px solid #fff; /* Đường viền dày 2px, màu trắng */
+            border-radius: 5px; /* Bo góc */
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .buy-now-3:hover {
+            background-color: #fff;
+            color: #C9BCB6; 
+        }
+        .buy-now-2 {
+            position: absolute;
+            bottom: 20px; /* Cách dưới 20px */
+            left: 10px; /* Đưa nút về bên trái */
+            padding: 8px 35px;
+            background-color: #DFDBD5; /* Màu nền */
+            color: #fff; /* Màu chữ */
+            border: 2px solid #fff; /* Đường viền dày 2px, màu trắng */
+            border-radius: 5px; /* Bo góc */
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .buy-now-2:hover {
+            background-color: #fff;
+            color: #DFDBD5; 
+        }
+        .buy-now-about {
+            position: absolute;
+            bottom: 20px; /* Cách dưới 20px */
+            left: 10px; /* Đưa nút về bên trái */
+            padding: 8px 35px;
+            background-color: #3A5249; /* Màu nền */
+            color: #fff; /* Màu chữ */
+            border: 2px solid #fff; /* Đường viền dày 2px, màu trắng */
+            border-radius: 5px; /* Bo góc */
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .buy-now-about:hover {
+            background-color: #fff;
+            color: #3A5249; 
+        }
+        .nav a:hover {
+            color: #7fad39; /* Chuyển màu chữ sang xanh dương */
+            background-color: transparent; /* Nền giữ nguyên hoặc thay đổi tùy ý */
+            border-radius: 100px; /* Bo góc */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 200px;
+            background-color: #fff;
+            height: 100px;
+        }
+        .logo img {
+            width: 145px;
+            height: 200px;
+            margin-right: 10px;
+            margin-bottom:  115px;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px; /* Khoảng cách từ đáy trang */
+            right: 20px; /* Khoảng cách từ bên phải */
+            padding: 10px 15px;
+            background-color: #7fad39;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background-color 0.3s ease;
+            
+        }
+        .scroll-to-top:hover {
+            background-color: #7fad39; /* Màu nền khi hover */
+        }
+        
+        .featured-products-title {
+            text-align: center; 
+            font-size: 34px; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+            padding-top: 100px;
+            color: #333; 
+        }
+        footer {
+            background-color: #212529; /* Màu nền tối */
+            color: white; /* Màu chữ trắng */
+            padding: 40px 20px; /* Padding cho footer */
+            margin-top: 100px;
+        }
+        .service-features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .feature-item {
+            flex: 1;
+            text-align: center;
+            padding: 70px;
+            /* background: #fff; */
+            color: black;
+            border-radius: 5px;
+            /* border: 2px solid red; */
+            margin: 0 10px;
+        }
+
+        .feature-image {
+            width: 80px; /* Đặt kích thước biểu tượng */
+            height: 80px;
+           
+            
+        }
+        
+        .featured-products-title-dmsp {
+            text-align: center; 
+            font-size: 34px; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+            padding-top: 0px;
+            color: #333; 
+        }
+        .featured-products-title-pd {
+            margin-right: 1065px;
+            font-size: 34px; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+            padding-top: 90px;
+            color: #333; 
+        }
+        .cart-count {
+            position: absolute;
+            top: 24px;  /* Di chuyển số lượng lên trên */
+            right: 195px; /* Di chuyển số lượng sang phải */
+            background-color: #7fad39; /* Màu nền số lượng giỏ hàng */
+            color: white; /* Màu chữ */
+            font-size: 8px; /* Kích thước chữ */
+            font-weight: bold; /* Đậm chữ */
+            padding: 4px 6px; /* Khoảng cách bên trong */
+            border-radius: 50%; /* Bo tròn để tạo hình tròn */
+            display: none; /* Ẩn mặc định */
+        }
+        .cart-count {
+            display: block; /* Hiển thị số lượng */
+        }
+        .previews img {
+            width: 100%;
+            height: 100px;
+        }
+        .action-btn {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            margin: 0 5px;
+            transition: all 0.3s;
+        }
+
+        .edit-btn {
+            background-color: #ffc107;
+            color: #fff;
+        }
+
+        .edit-btn:hover {
+            background-color: #e0a800;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px; /* Tạo khoảng cách giữa các cột */
+        }
+
+        .form-group {
+            flex: 1; /* Các nhóm chia đều không gian */
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 22%;
+            padding: 12px;
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            /* margin: 0 auto; Canh giữa nút */
+        }
+
+        .submit-btn:hover {
+            background-color: #d01750;
+        }
+        .product-row {
+            display: flex;
+            flex-wrap: wrap; /* Cho phép sản phẩm xuống dòng nếu không đủ không gian */
+            gap: 20px; /* Khoảng cách giữa các sản phẩm */
+            padding: 20px 170px 1px 170px; /* Cải thiện padding */
+            justify-content: flex-start; /* Căn trái khi có ít sản phẩm và xuống dòng */
+        }
+
+        /* Điều chỉnh các sản phẩm */
+        .product-item {
+            flex: 0 0 23%; /* Sản phẩm chiếm 23% chiều rộng */
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            max-width: 300px; /* Giới hạn chiều rộng tối đa cho mỗi sản phẩm */
+            margin: 10px 0; /* Thêm margin để tạo khoảng cách giữa các sản phẩm */
+        }
+
+        /* Khi có 1 sản phẩm */
+        .product-row:has(.product-item:nth-child(1)) {
+            justify-content: flex-start; /* Căn trái khi chỉ có 1 sản phẩm */
+        }
+
+        /* Khi có 2 sản phẩm */
+        .product-row:has(.product-item:nth-child(2)) {
+            justify-content: flex-start; /* Căn trái khi có 2 sản phẩm */
+            gap: 35px;
+        }
+
+        /* Khi có 3 sản phẩm */
+        .product-row:has(.product-item:nth-child(3)) {
+            justify-content: flex-start; /* Căn trái khi có 3 sản phẩm */
+            gap: 35px; /* Khoảng cách giữa các sản phẩm */
+        }
+
+        /* Khi có 4 sản phẩm */
+        .product-row:has(.product-item:nth-child(4)) {
+            justify-content: space-evenly; /* Phân phối đều với 4 sản phẩm */
+            gap: 35px;
+        }
+
+        /* Khi có 5 sản phẩm */
+        .product-row:has(.product-item:nth-child(5)) {
+            justify-content: flex-start; /* Căn trái khi có 5 sản phẩm */
+            gap: 35px;
+        }
+
+        /* Khi sản phẩm xuống dòng */
+        .product-row {
+            justify-content: flex-start; /* Căn trái khi sản phẩm xuống dòng */
+            width: 100%; /* Đảm bảo chiều rộng container không bị giới hạn */
+        }
+
+
+
+
+
+        
+
+         
+
+       
+            
+
+
+       
+        
+       
+    </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="home.php"> 
+                <img src="images/lo.png" alt="Sky Store Logo">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="home.php">Trang Chủ</a>
+            <a href="products.php">Sản Phẩm</a>
+            <a href="contact.php">Liên Hệ</a>
+            <a href="about.php">Giới Thiệu</a>
+        </nav>
+        <div class="header-icons">
+        <form method="GET" action="search.php">  
+        <div class="search-container">
+    
+        <input type="text" name="search_query" placeholder="Tìm kiếm...">
+        <button class="search-icon" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    
+</div>
+        </form>
+        <?php if (!isset($_SESSION['username'])): ?>
+                <a href="dangnhap.php" class="icon">
+                    <i class="fas fa-user"></i>
+                </a>
+            <?php endif; ?>
+
+            <?php if (isset($_SESSION['username'])): ?>
+                <div class="dropdown">
+                    <!-- Tên người dùng -->
+                    <a 
+                        href="#" 
+                        class="custom-dropdown-toggle" 
+                        id="userDropdown" 
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false">
+                        <?php echo "Xin chào, " . htmlspecialchars($_SESSION['username']); ?>
+                    </a>
+
+                    <!-- Menu Dropdown -->
+                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="customer.php">Thông tin</a></li>
+                        <li><a class="dropdown-item" href="orderhistory.php">Đơn hàng</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="dangxuat.php">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            <?php endif; ?>
+            
+        <a href="cart.php" class="icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">
+            <?php
+                // Kiểm tra nếu người dùng muốn xóa giỏ hàng
+                if (isset($_POST['clear_cart'])) {
+                    // Xóa giỏ hàng khỏi session
+                    unset($_SESSION['cart']);
+                    
+                    // Chuyển hướng lại trang giỏ hàng (hoặc trang hiện tại)
+                    header("Location: {$_SERVER['PHP_SELF']}");
+                    exit;
+                }
+
+                // Lấy giỏ hàng từ session
+                $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+
+                // Tính tổng số lượng sản phẩm
+                $count = 0;
+                foreach ($cart as $item) {
+                    $count += $item['quantity'];
+                }
+
+                // Hiển thị số lượng
+                echo $count;
+                ?>
+
+            </span>
+        </a>
+
+
+
+            
+
+            
+
+            <!-- <a href="chat_app/login.php" class="icon">
+                <i class="fas fa-comments"></i>
+            </a> -->
+
+
+
+        </div>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    
