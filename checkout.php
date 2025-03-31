@@ -79,6 +79,7 @@
                     }
                     return true; 
                 });
+                
             }
 
             $mail = new PHPMailer\PHPMailer\PHPMailer(true);
