@@ -1,0 +1,135 @@
+.scroll-to-top-chatbot {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: #7fad39;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+.message-container {
+  width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: #64646f33 0px 7px 29px 0px;
+  background: #31363F;
+}
+
+.message-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #edf1f3;
+}
+
+.message-box-chat {
+  height: 400px;
+  overflow-y: scroll;
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px solid #545250;
+  border-radius: 5px;
+  background: #222831;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.user {
+  justify-content: flex-end;
+}
+
+.bot {
+  justify-content: flex-start;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.user .avatar {
+  order: 2;
+  background: url("avatar.jpg");
+  background-size: cover;
+}
+
+.bot .avatar {
+  order: 1;
+  background: url("bot.jpg");
+  background-size: cover;
+}
+
+.text {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+.user .text {
+  background: #4a4d52;
+}
+
+.bot .text {
+  background: #8c8c8e;
+}
+
+.message-input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #cbcbce;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+}
+
+.message-input:focus {
+  border-color: #8296d0;
+  color: #1e1f1f;
+}
+
+.message-button {
+  position: absolute;
+  width: 80px;
+  border: none;
+  padding: 1px;
+  background: #31363F;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: .01rem;
+  margin-left: -4.1rem;
+  outline: none;
+}
+
+/* button i {
+  font-size: 3rem;
+} */
+
+.message-button:hover {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.message-box::-webkit-scrollbar {
+  width: 10px;
+}
+
+.message-box::-webkit-scrollbar-thumb {
+  background: #bcbdc0;
+  border-radius: 10px;
+}

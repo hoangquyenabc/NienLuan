@@ -1,0 +1,70 @@
+.review-section h2 {
+    margin-top: 5px;
+    margin-right: 1040px;
+}
+.review-section {
+    display: flex;
+    flex-direction: column; /* Sắp xếp nội dung theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa văn bản */
+    margin: 0 auto; /* Đảm bảo phần này ở giữa */
+    padding: 0 20px; /* Thêm padding */
+}
+.carousel-track {
+    display: flex;
+    justify-content: center; /* Căn giữa danh mục */
+    flex-wrap: wrap; /* Xuống dòng nếu không đủ chỗ */
+    gap: 10px; /* Khoảng cách giữa các danh mục */
+}
+
+.review-section h2 {
+    margin-top: 55px;
+    margin-right: 1040px;
+}
+.review-section {
+    display: flex;
+    flex-direction: column; /* Sắp xếp nội dung theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa văn bản */
+    margin: 0 auto; /* Đảm bảo phần này ở giữa */
+    padding: 0 20px; /* Thêm padding */
+}
+.carousel-track {
+    display: flex;
+    justify-content: center; /* Căn giữa danh mục */
+    flex-wrap: wrap; /* Xuống dòng nếu không đủ chỗ */
+    gap: 20px; /* Khoảng cách giữa các danh mục */
+}
+
+
+/* Phần tử từng danh mục */
+.product-item-dm {
+    display: flex;
+    flex-direction: column; /* Sắp xếp theo chiều dọc: ảnh trên, tên dưới */
+    align-items: center; /* Căn giữa nội dung */
+    text-align: center; /* Căn giữa văn bản */
+    max-width: 300px; /* Giới hạn chiều rộng */
+}
+
+/* Hình ảnh trong danh mục */
+.gallery-image {
+    width: 229px; /* Đặt chiều rộng ảnh */
+    height: auto; /* Tự điều chỉnh chiều cao để giữ tỉ lệ gốc */
+    margin-bottom: 10px; /* Tạo khoảng cách giữa ảnh và tên */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease;  */
+}
+
+/* .gallery-image:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+} */
+
+/* Tên danh mục */
+.product-item-dm p {
+    margin: 0;
+    font-size: 16px; /* Kích thước chữ */
+    color: #333; /* Màu chữ */
+    font-weight: bold; /* Chữ đậm */
+    margin-top: 5px; /* Khoảng cách trên tên */
+}

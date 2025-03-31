@@ -1,0 +1,15 @@
+.review-section-ct{
+    display: flex;
+    flex-direction: column; /* Sắp xếp nội dung theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa văn bản */
+    margin: 0 auto; /* Đảm bảo phần này ở giữa */
+    padding: 0 20px; /* Thêm padding */
+}
+
+/* Tiêu đề */
+.review-section-ct h2 {
+    margin-top: 39px;
+    margin-right: 1040px;
+    font-size: 34px;
+}

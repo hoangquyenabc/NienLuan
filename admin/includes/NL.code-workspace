@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../do_an_CT299-main"
+		},
+		{
+			"path": "../../../web"
+		},
+		{
+			"path": "../../../NLCS"
+		},
+		{
+			"path": "../../../ql_nuoc"
+		},
+		{
+			"path": "../../../../../WebBanHang"
+		},
+		{
+			"path": "../../../../../NMLTW/Shop-main"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "NL"
+	}
+}

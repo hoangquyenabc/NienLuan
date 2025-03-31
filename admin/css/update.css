@@ -1,0 +1,145 @@
+.custom-dropdown-toggle {
+    color: #000000; /* Màu chữ đen */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    transition: all 0.3s ease; /* Hiệu ứng mượt */
+    font-size: 20px;
+}
+
+/* Hiệu ứng hover */
+.custom-dropdown-toggle:hover {
+    color: #e91e63; 
+    text-decoration: none; 
+}
+
+/* Hiệu ứng khi nhấn */
+.custom-dropdown-toggle:active {
+    color: #e91e63; 
+    text-decoration: none; 
+}
+
+.dropdown{
+    padding-right: 20px;
+}
+.container {
+        margin: 100px auto; /* Canh giữa theo chiều ngang */
+        padding: 20px;
+        background-color: white;
+        border-radius: 7px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Sử dụng phần trăm để chiều rộng tự động thay đổi */
+        max-width: 3200px; /* Đặt giới hạn chiều rộng tối đa */
+    }
+
+
+    .container h2 {
+        color: #e91e63;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px; /* Tạo khoảng cách giữa các cột */
+    }
+
+    .form-group {
+        flex: 1; /* Các nhóm chia đều không gian */
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .submit-btn {
+        display: block;
+        width: 22%;
+        padding: 12px;
+        background-color: #e91e63;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        /* margin: 0 auto; Canh giữa nút */
+    }
+
+    .submit-btn:hover {
+        background-color: #d01750;
+    }
+    .breadcrumb {
+        padding: 8px 15px;
+        margin-bottom: 6px;
+        list-style: none;
+        /* background-color: #f5f5f5; */
+        border-radius: 4px;
+    }
+    .container-editproduct {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 900px; /* Điều chỉnh độ rộng tối đa */
+        width: 80%; /* Chiếm toàn bộ chiều rộng */
+        margin: 0 auto; /* Căn giữa container */
+        margin-top: 100px;
+        margin-left: 365px;
+        margin-left: 525px;
+    }
+    #descImagesContainer {
+        display: flex;
+        gap: 10px; /* Khoảng cách giữa các ảnh */
+        overflow-x: auto; /* Cho phép cuộn ngang nếu quá nhiều ảnh */
+        padding: 10px 0;
+    }
+    
+    .desc-image {
+        width: 100px;
+        height: auto;
+        
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .chat-button-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .scroll-to-top-chat {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: #e91e63;
+        color: white;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 24px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .scroll-to-top-chat:hover {
+        background-color: #e91e63;
+        transform: scale(1.1);
+    }
